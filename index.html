@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/chat.css">
+</head>
+<body>
+	<div class="overlay">
+		<div class="user-name-modal">
+			<h2 class="modal-title">What is your name?</h2>
+			<div class="user-name">
+				<input type="text" class="user-name-input" name="user-name" placeholder="Enter desired name...">
+				<button class="user-name-submit">Choose</button>
+				<div class="error">Username already taken or too short</div>
+				<div class="remember-me-wrapper">
+					<input type="checkbox" id="rememberMe" name="remember-me" class="remember-me">
+					<label for="rememberMe">Remember me</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main-wrapper">
+		<div class="chat-wrapper">
+			<div class="user-list-container">
+				<h2>users online</h2>
+				<ul class="user-list"></ul>
+			</div>
+			<div class="right-side">
+				<ul class="conversations-list"></ul>
+				<div class="main-chat-window"></div>
+				<div class="typing-wrapper"></div>
+				<div class="call-to-action-area">
+					<input type="text" class="message-box" autocomplete="off" placeholder="Type a message">
+					<button class="send-message">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/general.js"></script>
+	<script src="js/client.js"></script>
+</body>
+</html>
